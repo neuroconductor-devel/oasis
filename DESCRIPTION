@@ -1,43 +1,47 @@
 Package: oasis
 Type: Package
-Title: Multiple Sclerosis Lesion Segmentation using Magnetic Resonance Imaging
-    (MRI)
+Title: Multiple Sclerosis Lesion Segmentation using Magnetic Resonance
+        Imaging (MRI)
 Version: 3.0.1
 Date: 2018-02-15
-Authors@R: c(person(given = "Elizabeth M.", "Sweeney",  
-  email = "elizabethmargaretsweeney@gmail.com", role = c("aut", "cre")), 
-  person(given = "John", family = "Muschelli", email = "muschellij2@gmail.com", 
-  role = c("aut")), 
-  person(  given = "R. Taki", family = "Shinohara", 
-  email = "rshi@mail.med.upenn.edu", 
-  role = c("aut")))
-Description: Trains and makes predictions from the OASIS method, described in
-    detail in the paper "OASIS is Automated Statistical Inference for Segmentation,
-    with applications to multiple sclerosis lesion segmentation in MRI" 
-    <doi:10.1016/j.nicl.2013.03.002>. 
-    OASIS is a method for multiple sclerosis (MS)
-    lesion segmentation on structural magnetic resonance image (MRI) studies. OASIS
-    creates probability maps of lesion presence using the FLAIR, T2, T1, and PD
-    structural MRI volumes. This packages allows for training of the OASIS model
-    and prediction of OASIS probability maps from a trained model with user supplied
-    studies that have a gold standard lesion segmentation masks. The package will
-    also create OASIS probability maps for MRI studies using the OASIS model from
-    the OASIS paper if no gold standard lesion segmentation masks are available.
+Authors@R: c(person(given = "Elizabeth M.", "Sweeney", email =
+        "elizabethmargaretsweeney@gmail.com", role = c("aut", "cre")),
+        person(given = "John", family = "Muschelli", email =
+        "muschellij2@gmail.com", role = c("aut")), person( given = "R.
+        Taki", family = "Shinohara", email = "rshi@mail.med.upenn.edu",
+        role = c("aut")))
+Description: Trains and makes predictions from the OASIS method,
+        described in detail in the paper "OASIS is Automated
+        Statistical Inference for Segmentation, with applications to
+        multiple sclerosis lesion segmentation in MRI"
+        <doi:10.1016/j.nicl.2013.03.002>. OASIS is a method for
+        multiple sclerosis (MS) lesion segmentation on structural
+        magnetic resonance image (MRI) studies. OASIS creates
+        probability maps of lesion presence using the FLAIR, T2, T1,
+        and PD structural MRI volumes. This packages allows for
+        training of the OASIS model and prediction of OASIS probability
+        maps from a trained model with user supplied studies that have
+        a gold standard lesion segmentation masks. The package will
+        also create OASIS probability maps for MRI studies using the
+        OASIS model from the OASIS paper if no gold standard lesion
+        segmentation masks are available.
 Depends: R (>= 2.10)
-Imports: 
-    neurobase,
-    fslr (>= 2.13),
-    methods,
-    stats,
-    parallel,
-    oro.nifti,
-    mmand
+Imports: neurobase, fslr (>= 2.13), methods, stats, parallel,
+        oro.nifti, mmand
 Suggests: 
     httr,
     covr,
-    ROCR
+    ROCR,
+    testthat
 License: GPL-2
 LazyLoad: yes
 LazyData: yes
 Encoding: UTF-8
 RoxygenNote: 6.0.1
+Repository: Neuroconductor-Devel
+Remotes: 
+    neuroconductor-devel/mmand@109a35795781dee92804567236bcca5ba8903f08,
+    neuroconductor-devel/oro.nifti@517ce5312094bf1ecee49bd09024769d3e5d2daa,
+    neuroconductor-devel/neurobase@bed9014475564a8aaf3ddfcb64f3b8439383b99d,
+    neuroconductor-devel/fslr@22c50545a095a3a02deec976b23fa6a349e717ac
+biocViews: 
